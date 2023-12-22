@@ -3,7 +3,7 @@ def call(String project, String ImageTag, String hubUser){
      sh """
       docker images
       docker rmi ${hubUser}/${project}:${ImageTag}
-      //docker rmi ${hubUser}/${project} ${hubUser}/${project}:latest
+      docker rmi ${hubUser}/${project} ${hubUser}/${project}:latest
      """
 }
 
